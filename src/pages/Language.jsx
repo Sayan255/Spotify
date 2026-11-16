@@ -25,11 +25,19 @@ export default function Language() {
 
   return (
     <div>
-      <div className={`-mx-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-10 sm:pt-16 pb-7 sm:pb-8 bg-gradient-to-b ${meta.gradient}`}>
+      <div className={`relative isolate -mx-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-10 sm:pt-16 pb-7 sm:pb-8 overflow-hidden bg-gradient-to-br ${meta.gradient}`}>
+        <img
+          src={lang === 'hindi'
+            ? 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85'
+            : 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1800&q=85'}
+          alt=""
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
         <p className="text-xs font-bold uppercase tracking-widest">Language</p>
-        <h1 className="text-4xl sm:text-5xl lg:text-8xl font-black mt-2">{meta.name} Songs</h1>
-        <p className="mt-4 text-sm opacity-90">{meta.tagline}</p>
-        <p className="mt-2 text-sm opacity-80">
+        <h1 className="text-4xl sm:text-5xl lg:text-8xl font-black mt-2 drop-shadow-lg">{meta.name} Songs</h1>
+        <p className="mt-4 text-sm opacity-95 drop-shadow">{meta.tagline}</p>
+        <p className="mt-2 text-sm opacity-90 drop-shadow">
           {artists.length} artists • {songs.length} songs
           {loaded < total && ' • loading more…'}
         </p>
