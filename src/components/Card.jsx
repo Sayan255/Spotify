@@ -4,9 +4,9 @@ import Icon from './Icon.jsx'
 export default function Card({ to, image, title, subtitle, round = false }) {
   const shape = round ? 'rounded-full' : 'rounded-md'
   return (
-    <div className="group bg-sp-elev hover:bg-sp-high rounded-lg p-4 transition-colors">
+    <div className="group min-w-0 bg-sp-elev hover:bg-sp-high rounded-lg p-2.5 sm:p-4 transition-colors">
       <Link to={to} className="block">
-        <div className={`relative aspect-square mb-4 shadow-lg ${shape} overflow-hidden`}>
+        <div className={`relative aspect-square mb-3 sm:mb-4 shadow-lg ${shape} overflow-hidden`}>
           {image ? (
             <img src={image} alt="" loading="lazy" className="w-full h-full object-cover" />
           ) : (

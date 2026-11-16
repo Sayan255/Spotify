@@ -31,17 +31,17 @@ export default function Album() {
 
   return (
     <div>
-      <div className="-mx-4 md:-mx-8 px-4 md:px-8 pt-16 pb-8 flex flex-col md:flex-row items-center md:items-end gap-6 bg-gradient-to-b from-zinc-700 to-sp-base">
+      <div className="-mx-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-10 sm:pt-16 pb-7 sm:pb-8 flex flex-col md:flex-row items-center md:items-end gap-4 sm:gap-6 bg-gradient-to-b from-zinc-700 to-sp-base">
         {album.image ? (
-          <img src={album.image} alt={album.title} className="w-52 h-52 md:w-60 md:h-60 rounded shadow-2xl object-cover" />
+          <img src={album.image} alt={album.title} className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded shadow-2xl object-cover" />
         ) : (
-          <div className="w-52 h-52 md:w-60 md:h-60 rounded bg-sp-high grid place-items-center">
+          <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded bg-sp-high grid place-items-center">
             <Icon name="music" className="w-16 h-16" />
           </div>
         )}
         <div className="text-center md:text-left min-w-0">
           <p className="text-xs font-bold uppercase tracking-widest">Album</p>
-          <h1 className="text-3xl md:text-6xl font-black mt-2 break-words">{album.title}</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-black mt-2 break-words">{album.title}</h1>
           <p className="mt-4 text-sm text-sp-muted">
             <span className="text-white font-bold">{album.artist}</span>
             {album.year && ` • ${album.year}`} • {songs.length} songs with previews

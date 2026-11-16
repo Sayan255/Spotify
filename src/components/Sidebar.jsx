@@ -21,7 +21,7 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="hidden md:flex flex-col gap-2 w-64 shrink-0 min-h-0">
+    <aside className="hidden lg:flex flex-col gap-2 w-64 shrink-0 min-h-0">
       <div className="bg-sp-elev rounded-lg p-4 flex flex-col gap-1">
         <Link to="/" className="px-2 pb-4">
           <Logo />

@@ -32,7 +32,7 @@ export default function AddToPlaylist({ song }) {
         onClick={toggle}
         aria-label="Add to playlist"
         title="Add to playlist"
-        className={`transition hover:text-white ${open ? 'opacity-100 text-white' : 'opacity-0 group-hover:opacity-100'}`}
+        className={`transition hover:text-white ${open ? 'opacity-100 text-white' : 'text-sp-muted sm:opacity-0 sm:group-hover:opacity-100'}`}
       >
         <Icon name="more" className="w-5 h-5" />
       </button>

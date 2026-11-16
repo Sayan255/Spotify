@@ -23,17 +23,17 @@ export default function Artist() {
 
   return (
     <div>
-      <div className={`-mx-4 md:-mx-8 px-4 md:px-8 pt-16 pb-8 flex flex-col md:flex-row items-center md:items-end gap-6 bg-gradient-to-b ${lang.gradient}`}>
+      <div className={`-mx-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-10 sm:pt-16 pb-7 sm:pb-8 flex flex-col md:flex-row items-center md:items-end gap-4 sm:gap-6 bg-gradient-to-b ${lang.gradient}`}>
         {songs[0]?.image ? (
-          <img src={songs[0].image} alt={artist.name} className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-2xl" />
+          <img src={songs[0].image} alt={artist.name} className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover shadow-2xl" />
         ) : (
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-black/30 grid place-items-center">
+          <div className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-black/30 grid place-items-center">
             <Icon name="music" className="w-16 h-16" />
           </div>
         )}
         <div className="text-center md:text-left">
           <p className="text-xs font-bold uppercase tracking-widest">Artist • {lang.name}</p>
-          <h1 className="text-4xl md:text-7xl font-black mt-2">{artist.name}</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-7xl font-black mt-2 break-words">{artist.name}</h1>
           <p className="mt-3 text-sm opacity-90">
             {songs.length} songs with previews • {albums.length} albums
           </p>

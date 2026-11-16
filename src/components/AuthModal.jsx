@@ -78,7 +78,7 @@ export default function AuthModal() {
         if (e.target === e.currentTarget) closeAuth()
       }}
     >
-      <div role="dialog" aria-modal="true" className="relative w-full max-w-md bg-[#121212] rounded-xl p-8 md:p-10 shadow-2xl">
+      <div role="dialog" aria-modal="true" className="relative w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto bg-[#121212] rounded-xl p-5 sm:p-8 md:p-10 shadow-2xl">
         <button onClick={closeAuth} aria-label="Close" className="absolute right-4 top-4 text-sp-muted hover:text-white">
           <Icon name="close" className="w-6 h-6" />
         </button>

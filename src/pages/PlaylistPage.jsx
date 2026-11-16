@@ -32,11 +32,11 @@ export default function PlaylistPage() {
   return (
     <div>
       <div
-        className={`-mx-4 md:-mx-8 px-4 md:px-8 pt-16 pb-8 flex flex-col md:flex-row items-center md:items-end gap-6 bg-gradient-to-b ${
+        className={`-mx-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-10 sm:pt-16 pb-7 sm:pb-8 flex flex-col md:flex-row items-center md:items-end gap-4 sm:gap-6 bg-gradient-to-b ${
           isLiked ? 'from-indigo-700 to-sky-300' : 'from-zinc-600 to-sp-base'
         }`}
       >
-        <div className="w-52 h-52 md:w-56 md:h-56 rounded shadow-2xl bg-black/30 overflow-hidden grid place-items-center shrink-0">
+        <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-56 md:h-56 rounded shadow-2xl bg-black/30 overflow-hidden grid place-items-center shrink-0">
           {songs[0]?.image ? (
             <img src={songs[0].image} alt="" className="w-full h-full object-cover" />
           ) : isLiked ? (
@@ -48,14 +48,14 @@ export default function PlaylistPage() {
         <div className="text-center md:text-left min-w-0 w-full">
           <p className="text-xs font-bold uppercase tracking-widest">Playlist</p>
           {isLiked ? (
-            <h1 className="text-4xl md:text-7xl font-black mt-2">Liked Songs</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-7xl font-black mt-2">Liked Songs</h1>
           ) : (
             <input
               key={id}
               defaultValue={playlist.name}
               onBlur={(e) => renamePlaylist(id, e.target.value)}
               aria-label="Playlist name"
-              className="w-full bg-transparent text-4xl md:text-6xl font-black mt-2 focus:outline-none border-b border-transparent focus:border-white/40"
+              className="w-full bg-transparent text-center md:text-left text-3xl sm:text-4xl lg:text-6xl font-black mt-2 focus:outline-none border-b border-transparent focus:border-white/40"
             />
           )}
           <p className="mt-3 text-sm opacity-90">
@@ -64,7 +64,7 @@ export default function PlaylistPage() {
         </div>
       </div>
 
-      <div className="flex items-center gap-6 py-6">
+      <div className="flex flex-wrap items-center gap-4 sm:gap-6 py-5 sm:py-6">
         <button
           onClick={() => playList(songs)}
           disabled={!songs.length}

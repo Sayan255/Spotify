@@ -25,9 +25,9 @@ export default function Language() {
 
   return (
     <div>
-      <div className={`-mx-4 md:-mx-8 px-4 md:px-8 pt-16 pb-8 bg-gradient-to-b ${meta.gradient}`}>
+      <div className={`-mx-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-10 sm:pt-16 pb-7 sm:pb-8 bg-gradient-to-b ${meta.gradient}`}>
         <p className="text-xs font-bold uppercase tracking-widest">Language</p>
-        <h1 className="text-5xl md:text-8xl font-black mt-2">{meta.name} Songs</h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-8xl font-black mt-2">{meta.name} Songs</h1>
         <p className="mt-4 text-sm opacity-90">{meta.tagline}</p>
         <p className="mt-2 text-sm opacity-80">
           {artists.length} artists • {songs.length} songs
@@ -35,7 +35,7 @@ export default function Language() {
         </p>
       </div>
 
-      <div className="flex items-center gap-4 py-6">
+      <div className="flex flex-wrap items-center gap-3 sm:gap-4 py-5 sm:py-6">
         <button
           onClick={() => playList(shown)}
           disabled={!shown.length}
@@ -48,7 +48,7 @@ export default function Language() {
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           placeholder="Filter songs"
-          className="bg-sp-high rounded-full px-4 py-2 text-sm w-64 focus:outline-none focus:ring-2 focus:ring-white/30"
+          className="bg-sp-high rounded-full px-4 py-2 text-sm flex-1 min-w-0 sm:flex-none sm:w-64 focus:outline-none focus:ring-2 focus:ring-white/30"
         />
       </div>
 

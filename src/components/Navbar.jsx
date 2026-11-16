@@ -17,28 +17,28 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-30 h-16 px-4 flex items-center justify-between gap-3 bg-[#121212]">
-      <div className="flex items-center gap-2">
-        <button onClick={() => navigate(-1)} aria-label="Go back" className={roundBtn}>
+    <header className="sticky top-0 z-30 h-14 sm:h-16 px-3 sm:px-4 flex items-center justify-between gap-2 bg-[#121212]">
+      <div className="flex min-w-0 items-center gap-1 sm:gap-2">
+        <button onClick={() => navigate(-1)} aria-label="Go back" className={`${roundBtn} hidden sm:grid`}>
           <Icon name="chevronLeft" className="w-5 h-5" />
         </button>
-        <button onClick={() => navigate(1)} aria-label="Go forward" className={roundBtn}>
+        <button onClick={() => navigate(1)} aria-label="Go forward" className={`${roundBtn} hidden sm:grid`}>
           <Icon name="chevronRight" className="w-5 h-5" />
         </button>
-        <div className="flex md:hidden items-center gap-2 ml-2">
-          <Link to="/" aria-label="Home" className="w-8 h-8 rounded-full bg-sp-high grid place-items-center">
+        <div className="flex lg:hidden items-center gap-1 sm:gap-2">
+          <Link to="/" aria-label="Home" className="w-8 h-8 shrink-0 rounded-full bg-sp-high grid place-items-center">
             <Icon name="home" className="w-5 h-5" />
           </Link>
-          <Link to="/search" aria-label="Search" className="w-8 h-8 rounded-full bg-sp-high grid place-items-center">
+          <Link to="/search" aria-label="Search" className="w-8 h-8 shrink-0 rounded-full bg-sp-high grid place-items-center">
             <Icon name="search" className="w-5 h-5" />
           </Link>
-          <Link to="/library" aria-label="Library" className="w-8 h-8 rounded-full bg-sp-high grid place-items-center">
+          <Link to="/library" aria-label="Library" className="w-8 h-8 shrink-0 rounded-full bg-sp-high grid place-items-center">
             <Icon name="library" className="w-5 h-5" />
           </Link>
         </div>
       </div>
 
-      <div className="flex items-center gap-2 relative">
+      <div className="relative flex shrink-0 items-center gap-1 sm:gap-2">
         {user ? (
           <>
             <button
@@ -73,13 +73,13 @@ export default function Navbar() {
           <>
             <button
               onClick={() => openAuth('signup')}
-              className="px-5 md:px-7 py-3 rounded-full bg-white text-black font-bold text-sm hover:scale-105 transition"
+              className="px-3 sm:px-5 lg:px-7 py-2 sm:py-3 rounded-full bg-white text-black font-bold text-xs sm:text-sm hover:scale-105 transition"
             >
               Sign up
             </button>
             <button
               onClick={() => openAuth('login')}
-              className="px-5 md:px-7 py-3 rounded-full bg-black text-white font-bold text-sm hover:scale-105 transition"
+              className="px-3 sm:px-5 lg:px-7 py-2 sm:py-3 rounded-full bg-black text-white font-bold text-xs sm:text-sm hover:scale-105 transition"
             >
               Log in
             </button>

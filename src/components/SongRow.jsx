@@ -13,7 +13,7 @@ export default function SongRow({ song, index = 0, list = [], showAlbum = true, 
   return (
     <div
       onClick={() => playSong(song, list)}
-      className="group grid grid-cols-[32px_minmax(0,1fr)_auto] md:grid-cols-[32px_minmax(0,1fr)_minmax(0,0.8fr)_auto] items-center gap-4 px-3 py-2 rounded-md hover:bg-white/10 cursor-pointer select-none"
+      className="group grid grid-cols-[24px_minmax(0,1fr)_auto] sm:grid-cols-[32px_minmax(0,1fr)_auto] lg:grid-cols-[32px_minmax(0,1fr)_minmax(0,0.8fr)_auto] items-center gap-2 sm:gap-4 px-1.5 sm:px-3 py-2 rounded-md hover:bg-white/10 cursor-pointer select-none"
     >
       <div className="w-8 text-center text-sm text-sp-muted">
         {active && playing ? (
@@ -26,7 +26,7 @@ export default function SongRow({ song, index = 0, list = [], showAlbum = true, 
         )}
       </div>
 
-      <div className="flex items-center gap-3 min-w-0">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
         <img
           src={song.thumb || song.image}
           alt=""
@@ -45,7 +45,7 @@ export default function SongRow({ song, index = 0, list = [], showAlbum = true, 
         <button
           onClick={() => toggleLike(song)}
           aria-label={liked ? 'Unlike' : 'Like'}
-          className={`transition ${liked ? 'text-spotify opacity-100' : 'opacity-0 group-hover:opacity-100 hover:text-white'}`}
+          className={`transition ${liked ? 'text-spotify opacity-100' : 'text-sp-muted sm:opacity-0 sm:group-hover:opacity-100 hover:text-white'}`}
         >
           <Icon name={liked ? 'heartFilled' : 'heart'} className="w-4 h-4" />
         </button>
@@ -53,7 +53,7 @@ export default function SongRow({ song, index = 0, list = [], showAlbum = true, 
           <button
             onClick={() => onRemove(song)}
             aria-label="Remove from playlist"
-            className="opacity-0 group-hover:opacity-100 hover:text-white transition"
+            className="text-sp-muted sm:opacity-0 sm:group-hover:opacity-100 hover:text-white transition"
           >
             <Icon name="close" className="w-4 h-4" />
           </button>
